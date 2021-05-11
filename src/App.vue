@@ -1,5 +1,6 @@
 <template>
   <div>
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
   <form v-if="isSubmit === false" @submit.prevent="onSubmit">
     <input type="text" v-model="name" name="name" >
     <input type="email" v-model="email" name="email">
@@ -12,11 +13,6 @@
     <p>サンクス</p>
   </div>
 
-  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-    <input type="text" name="name" />
-    <input type="email" name="email" />
-    <textarea name="content"></textarea>
-  </form>
 </div>
 </template>
 
